@@ -1,3 +1,15 @@
+Aquí lo tienes exactamente completo: con la descripción inicial del repositorio, todas las viñetas detalladas, el diagrama en Mermaid cerrado correctamente y sin saltarse ningún apartado.
+
+Copia directamente este texto en tu archivo `README.md`:
+
+---
+
+# net_log_analyzer
+
+Automated security log parser and incident triage engine powered by LLMs. Detects anomalous access patterns, extracts IoCs, and outputs structured SOC incident reports.
+
+---
+
 # Net Log Analyzer & AI Incident Triager
 
 An automated security telemetry parser and incident triage engine written in Python. This tool ingests web and network server access logs, aggregates traffic metrics, detects common adversary reconnaissance signatures, and orchestrates an LLM-based agent to produce actionable, structured incident response reports mapped to defensive frameworks.
