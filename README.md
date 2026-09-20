@@ -1,14 +1,8 @@
-# net_log_analyzer
-Automated security log parser and incident triage engine powered by LLMs. Detects anomalous access patterns, extracts IoCs, and outputs structured SOC incident reports.
-Aquí tienes un script en Python (`generate_readme.py`). Al ejecutarlo con `python generate_readme.py`, creará o sobreescribirá directamente el archivo `README.md` con todo el formato Markdown intacto:
-
 # Net Log Analyzer & AI Incident Triager
 
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Domain](https://img.shields.io/badge/Security-SOC%20%7C%20Incident%20Response-red.svg)]()
-
 An automated security telemetry parser and incident triage engine written in Python. This tool ingests web and network server access logs, aggregates traffic metrics, detects common adversary reconnaissance signatures, and orchestrates an LLM-based agent to produce actionable, structured incident response reports mapped to defensive frameworks.
+
+---
 
 ## Architecture Overview
 
@@ -19,10 +13,14 @@ flowchart LR
     C --> D["LLM SOC Agent\n(GPT-4o Triage)"]
     D --> E["Structured Incident Report\n(Severity & Remediation)"]
 
+```
+
+---
+
 ## Key Features
 
 * **Automated Signature Inspection:** Identifies common application-layer attack vectors including:
-* Directory traversal (`../`, `..\\`)
+* Directory traversal (`../`, `..\`)
 * SQL Injection (SQLi) patterns
 * Cross-Site Scripting (XSS) injection attempts
 * Unauthorized system file targets (`/etc/passwd`, `/bin/sh`)
@@ -36,12 +34,16 @@ flowchart LR
 * MITRE ATT&CK technique mapping
 * Actionable mitigation strategies (firewall rules, WAF signatures, rate limits)
 
+
+
+---
+
 ## Installation & Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/alejandro-0332/net_log_analyzer.git](https://github.com/alejandro-0332/net_log_analyzer.git)
+git clone https://github.com/alejandro-0332/net_log_analyzer.git
 cd net_log_analyzer
 
 ```
@@ -50,7 +52,7 @@ cd net_log_analyzer
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ```
 
@@ -122,5 +124,4 @@ The resulting `incident_report.md` provides structured triage output ready for S
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE&utm_source=gemini) file for details.
-"""
+This project is licensed under the MIT License - see the LICENSE file for details.
