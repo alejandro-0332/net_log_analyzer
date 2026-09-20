@@ -129,12 +129,3 @@ The resulting `incident_report.md` provides structured triage output ready for S
 
 This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE&utm_source=gemini) file for details.
 """
-
-with open("README.md", "w", encoding="utf-8") as f:
-f.write(readme_content)
-
-print("[+] README.md generado correctamente con codificación UTF-8.")
-
-```
-
-```
