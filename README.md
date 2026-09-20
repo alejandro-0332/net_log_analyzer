@@ -12,17 +12,12 @@ An automated security telemetry parser and incident triage engine written in Pyt
 
 ## Architecture Overview
 
-+-------------------+      +----------------------+      +-------------------------+
-| Access Log Stream | ---> |  Regex & Heuristic   | ---> |  Statistical Aggregator |
-| (Nginx / Apache)  |      |   Pattern Matching   |      |  (Metrics & Anomalies)  |
-+-------------------+      +----------------------+      +-------------------------+
-                                                                      |
-                                                                      v
-+--------------------------+      +---------------------+      +-------------------------+
-| Structured Report (.md)  | <--- | Response Validation | <--- | LLM SOC Agent (GPT-4o)  |
-| - Threat Severity        |      +---------------------+      | (Triage & ATT&CK Maps)  |
-| - Actionable Hardening   |                                   +-------------------------+
-+--------------------------+
+```mermaid
+flowchart LR
+    A["Access Log Stream\n(Nginx / Apache)"] --> B["Regex & Pattern Matching\n(Signatures & IoCs)"]
+    B --> C["Statistical Aggregator\n(Metrics & Anomalies)"]
+    C --> D["LLM SOC Agent\n(GPT-4o Triage)"]
+    D --> E["Structured Incident Report\n(Severity & Remediation)"]
 
 ## Key Features
 
